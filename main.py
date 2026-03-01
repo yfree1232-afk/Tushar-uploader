@@ -561,14 +561,15 @@ async def upload(bot: Client, m: Message):
     raw_text6 = input6.text
     await input6.delete(True)
     await editable.delete()
+await editable.delete()
 
 thumb = "no"
-    failed_count = 0
+failed_count = 0
 
-    if len(links) == 1:
-        count = 1
-    else:
-        count = int(raw_text)
+if len(links) == 1:
+    count = 1
+else:
+    count = int(raw_text)
         
     try:
         for i in range(count - 1, len(links)):
