@@ -563,16 +563,13 @@ async def upload(bot: Client, m: Message):
     await editable.delete()
 
 thumb = "no"
-failed_count = 0
+    failed_count = 0
 
-if len(links) == 1:
-    count = 1
-else:
-    count = int(raw_text)
-    
-    failed_count =0
-    
-
+    if len(links) == 1:
+        count = 1
+    else:
+        count = int(raw_text)
+        
     try:
         for i in range(count - 1, len(links)):
             V = links[i][1].replace("file/d/","uc?export=download&id=").replace("www.youtube-nocookie.com/embed", "youtu.be").replace("?modestbranding=1", "").replace("/view?usp=sharing","") # .replace("mpd","m3u8")
