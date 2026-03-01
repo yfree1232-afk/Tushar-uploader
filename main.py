@@ -549,7 +549,7 @@ async def upload(bot: Client, m: Message):
     input4: Message = await bot.listen(editable.chat.id)
     raw_text4 = input4.text
     await input4.delete(True)
-    if raw_text4 == 3:
+    if raw_text4 == "3":
         MR = token
     else:
         MR = raw_text4
@@ -565,16 +565,13 @@ async def upload(bot: Client, m: Message):
 thumb = "no"
 failed_count = 0
 
-if len(links) == 1:
+if len(links) == 1
     count = 1
 else:
     count = int(raw_text)
     
     failed_count =0
-    if len(links) == 1:
-        count = 1
-    else:
-        count = int(raw_text)
+    
 
     try:
         for i in range(count - 1, len(links)):
