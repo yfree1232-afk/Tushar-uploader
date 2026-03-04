@@ -561,7 +561,7 @@ async def upload(bot: Client, m: Message):
     raw_text6 = input6.text
     await input6.delete(True)
     await editable.delete()
-await editable.delete()
+
 
 thumb = "no"
 failed_count = 0
