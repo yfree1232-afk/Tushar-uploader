@@ -127,7 +127,7 @@ async def add_auth_user(client: Client, message: Message):
         )
 
 @bot.on_message(filters.command("users") & filters.private)
-import sqlite3
+
 
 @bot.on_message(filters.command("users") & filters.private)
 async def list_premium_users(client: Client, message: Message):
