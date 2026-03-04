@@ -760,7 +760,7 @@ async def upload(bot: Client, m: Message):
                         response = scraper.get(url)
 
                         # Check if the response status is OK
-                                                if response.status_code == 200:
+                        if response.status_code == 200:
                             # Write the image content to a file
                             with open(f'{name}.jpg', 'wb') as file:  # Save as JPG (or PNG if you want)
                                 file.write(response.content)
