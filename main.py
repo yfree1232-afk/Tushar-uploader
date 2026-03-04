@@ -18,6 +18,7 @@ import ffmpeg
 import logging 
 import yt_dlp
 from aiohttp import web
+from io import BytesIO
 from core import *
 from urllib.parse import urlparse, parse_qs
 from bs4 import BeautifulSoup
