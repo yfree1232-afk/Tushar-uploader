@@ -450,7 +450,8 @@ async def help_command(client: Client, msg: Message):
 # Upload command handler
 @bot.on_message(filters.command(["txt"]))
 async def upload(bot: Client, m: Message):
-    if not is_authorized(m.from_user.id):
+    user_id = m.from_user.id if m.from_user else m.chat.id
+if not is_authorized(user_id):
         await m.reply_text("**🚫You are not authorized to use this bot.**")
         return
 
