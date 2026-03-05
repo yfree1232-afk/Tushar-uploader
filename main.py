@@ -133,7 +133,6 @@ image_urls = [
 "https://picsum.photos/830/540"
 ]
     # Add more image URLs as needed
-]
 random_image_url = random.choice(image_urls)
 
 try:
