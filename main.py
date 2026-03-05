@@ -133,12 +133,21 @@ image_urls = [
 "https://picsum.photos/830/540"
 ]
     # Add more image URLs as needed
-random_image_url = random.choice(image_urls)
+# START COMMAND
+@app.on_message(filters.command("start"))
+async def start_command(client: Client, message: Message):
 
-try:
-    await app.send_photo(chat_id, random_image_url)
-except:
-    pass
+    random_image_url = random.choice(image_urls)
+
+    try:
+        await message.reply_photo(
+            photo=random_image_url,
+            caption="**🤖 Welcome to the Bot!**",
+            reply_markup=keyboard
+        )
+    except:
+        await message.reply_text("Welcome to the bot!", reply_markup=keyboard)
+        
 # Caption for the image
 caption = (
         "**ʜᴇʟʟᴏ👋**\n\n"
